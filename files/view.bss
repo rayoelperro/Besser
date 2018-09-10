@@ -1,0 +1,7 @@
+import (:'javax.swing.JFrame' 'java.awt.Dimension')
+
+set win = (@JFrame:)
+@win.defaultCloseOperation = ((@JFrame.EXIT_ON_CLOSE) as JINT)
+@win.setTitle: 'Mi JFrame personalizado'
+@win.pack:
+@win.show:

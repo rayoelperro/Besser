@@ -1,0 +1,14 @@
+set a = 0
+
+while (@a < 50) then
+    set a = (@a + 1)
+    print (@a as STR)
+end
+
+repeat 50 as key then
+    print (': ' + (@key as STR))
+end
+
+repeat 50 then
+    print '50 times'
+end

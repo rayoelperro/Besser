@@ -1,0 +1,18 @@
+get (:'join_in_str') of 'files\strings.bss'
+
+set a = 'Alberto'
+
+then
+    set b = 'Elorza'
+    set a = (@join_in_str: ' ' @a @b)
+end
+isolated then
+    try then
+        print @a
+    except
+        print (get 0)
+    end
+end
+isolated (:@a) then
+    except = ('So cool name: ' + (get 0))
+end

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="frenegen">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../Frenegen/out/artifacts/Frenegen_jar/frenegen.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

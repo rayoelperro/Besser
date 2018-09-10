@@ -1,0 +1,20 @@
+get (:'join_in_str' 'concat' 'to_java_str' 'to_java_str_builder' 'str') of 'files/strings.bss'
+
+if false then
+    set arr:
+
+    for i of (0 until ((read 'How many: ') as NUM)) then
+        set arr = (@arr + (read ': '))
+    end
+
+    if ((size @arr) > 0) then
+        print (@join_in_str: ' ' @arr)
+    end
+
+    print (@concat: 'Hello, I am: ' (read 'Type your name please: ') ' from ' (read 'Type your city please: '))
+else
+    set s = (@to_java_str_builder: (@to_java_str: ''))
+    @s.append: (read)
+    @s.append: (read)
+    print (@str: (@to_java_str: @s))
+end

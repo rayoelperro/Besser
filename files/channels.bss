@@ -1,0 +1,18 @@
+get (:'join_in_str') of 'files\strings.bss'
+
+fun insert then
+    set x = (get 0)
+    set i = true
+    while @i then
+        set d = (read)
+        if ((size @d) > 0) then
+            @x.set = ((@x.get) + @d)
+        else
+            set i = false
+        end
+    end
+end
+
+set cn = (chan (:))
+@insert: @cn
+print (@join_in_str: ' ' (@cn.get))

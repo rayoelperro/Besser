@@ -1,0 +1,55 @@
+import (:'java.lang.String' 'java.lang.StringBuilder')
+
+fun join_in_str then
+    set all = (get as ARRAY)
+    set spl = (get 0)
+    book members
+    if (@all on STR ARRAY) then
+        set members = (1 of @all)
+    else
+        set members = (@all - 0)
+    end
+    except if ((size @members) = 0)
+    set result = (0 of @members)
+    set members = (@members - 0)
+    for i of @members then
+        set result = ((@result + @spl) + @i)
+    end
+end @result
+
+fun concat then
+    set members = (get as ARRAY)
+    except if ((size @members) = 0)
+    set result = ''
+    for i of @members then
+        set result = (@result + @i)
+    end
+end @result
+
+fun to_java_str then
+    set lms = (get as ARRAY)
+    book jstr
+    when then
+    | @lms on ELEM
+        set jstr = (@String: ((0 of @lms).toString:))
+    | @lms on STR
+        set jstr = (@String: (0 of @lms))
+    | true
+        except 'Wrong argument'
+    end
+end @jstr
+
+fun to_java_str_builder then
+    set jstr = (@StringBuilder: (get 0))
+end @jstr
+
+fun str then
+    set lms = (get as ARRAY)
+    book nstr
+    when then
+    | @lms on ELEM
+        set nstr = ((@StringBuilder: (0 of @lms)).toString:)
+    | true
+        except 'Wrong argument'
+    end
+end @nstr

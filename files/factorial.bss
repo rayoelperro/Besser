@@ -1,0 +1,17 @@
+set last = (chan 0)
+
+fun factorial then
+    set n = (get 0)
+    book res
+    if (@n = 0) then
+        set res = 1
+    else
+        set res = (@n * (@factorial: (@n - 1)))
+    end
+    @last.set = @res
+end @res
+
+print ('Factorial 3! : ' + ((@factorial: 3) as STR))
+print ((@last.get) as STR)
+print ('Factorial 4! : ' + ((@factorial: 4) as STR))
+print ((@last.get) as STR)

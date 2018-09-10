@@ -1,0 +1,11 @@
+try then
+    print ('hola' + ' mundo'
+except
+    print (get 0)
+end
+
+try then
+    print 'hola,' + (' que ' + ' pasa'))
+except
+    print (get 0)
+end

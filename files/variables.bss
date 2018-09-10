@@ -1,0 +1,8 @@
+get (:'to_java_str') of 'files\strings.bss'
+
+set flnamestr = (@to_java_str: (read 'Write your full name: '))
+set fullname = (@flnamestr.split:' ')
+@fullname as name fstsurname sndsurname
+print @name
+print @fstsurname
+print @sndsurname

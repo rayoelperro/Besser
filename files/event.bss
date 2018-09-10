@@ -1,0 +1,19 @@
+elem mine then
+    set name as STR
+end
+
+fun rep of @mine then
+    self name = (read ': ')
+end
+
+fun unt of @mine then
+    set res = ((size (self name)) > 5)
+end @res
+
+set ins = (@mine:'')
+
+event longname of @ins repeat rep until unt
+
+on @longname then
+    print (self name)
+end
