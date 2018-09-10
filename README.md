@@ -61,7 +61,7 @@ print ((@mine.can_drive:) as STR)
 @mine.print_name_and_age:
 ```
 
-#### BLOCKS:
+#### Blocks:
 ```
 set a = 'hello'
 then
@@ -116,5 +116,28 @@ end
 
 while true then
   print 'This loop will never end'
+end
+```
+
+#### Events:
+```
+elem info then
+    set name as STR
+end
+
+fun rep of @info then
+    self name = (read ': ')
+end
+
+fun unt of @info then
+    set res = ((size (self name)) > 5)
+end @res
+
+set ins = (@info:'')
+
+event longname of @ins repeat rep until unt
+
+on @longname then
+    print (self name)
 end
 ```
