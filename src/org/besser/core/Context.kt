@@ -35,6 +35,7 @@ class Context : LinkedHashMap<String, Token<*>> {
 
     constructor(upper : Context, type : ContextType): super(){
         funyield = upper.funyield
+        self = upper.self
         for (tok in upper)
             this[tok.key] = tok.value
         this.type = type

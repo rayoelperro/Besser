@@ -18,5 +18,6 @@ enum class ContextType {
     Except,
     Import,
     RepeatLoop,
-    Closure
+    Closure,
+    Spawn
 }

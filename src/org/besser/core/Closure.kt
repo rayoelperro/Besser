@@ -3,13 +3,17 @@ package org.besser.core
 /**
  * Created by rayoe on 11/09/2018.
  */
-class Closure(action: Parser, val tocall : Fun, val arr : Array<Token<*>>, val ins : Instance?): Doing(action, action.levels) {
+class Closure(action: Parser, val tocall : Fun, val arr : Array<Token<*>>, val ins : Instance?, val spawn : Boolean): Doing(action, action.levels) {
 
     val function = Fun("closure", action.levels, action.levels.last())
     private var deep = 1
 
     fun save() {
-        tocall.exec(arr, ins, function)
+        if (spawn) {
+            Spawn.spawnFun(tocall, arr, ins, function)
+        } else {
+            tocall.exec(arr, ins, function)
+        }
         action.changeDoing(DoingType.Execute)
     }
 

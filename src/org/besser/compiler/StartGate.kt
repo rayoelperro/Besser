@@ -10,37 +10,6 @@ import java.io.File
  * Created by rayoe on 24/08/2018.
  */
 
-/* Expected:
-
-    get (:'join_in_str') of 'STRINGS'
-
-    elem myElem then
-        set name as STR
-        set age as NUM
-        set canDrive as BOOL
-    end
-
-    to myElem
-        fun show then
-            save res
-            if (self canDrive) then
-                set res = (@join_in_str: (self name) ' is ' (self age) ' years old and can drive')
-            else
-                set res = (@join_in_str: (self name) ' is ' (self age) ' years old and can not drive')
-            end
-        end @res
-    end
-
-    fun createElem then
-        set resp = (myElem: (get 0) 16 false)
-    end @resp
-
-    on ready then
-        set result = ((@createElem: 'Alberto').show:)
-    end
-
- */
-
 fun main(args: Array<String>) {
     val levels: MutableList<Context> = mutableListOf()
     levels.add(Context(args))
@@ -58,7 +27,7 @@ fun main(args: Array<String>) {
         parse.parse(lexic.getTokensPerLine() as Array<Array<Token<*>>>)
     } else if (args.isEmpty()) {
         val parse: Parser = Parser(levels)
-        val file = false
+        val file = true
         if (file) {
             val lines: Array<String> = arrayOf(*(File(readLine()).readLines(charset("UTF-8")).toTypedArray()))
             val lexic: Lexer = Lexer(lines)

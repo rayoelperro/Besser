@@ -62,9 +62,9 @@ class Parser(val levels: MutableList<Context>) {
         return actualDoing.run(tks)
     }
 
-    fun changeDoing(func : Fun, array: Array<Token<*>>, ins : Instance? = null) {
+    fun changeDoing(func : Fun, array: Array<Token<*>>, ins : Instance? = null, spawn : Boolean = false) {
         actualDoingType = DoingType.Closure
-        actualDoing = Closure(this, func, array, ins)
+        actualDoing = Closure(this, func, array, ins, spawn)
     }
 
     fun changeDoing(array: Array<Token<*>>) {
@@ -90,6 +90,7 @@ class Parser(val levels: MutableList<Context>) {
             DoingType.WhenCondition -> WhenCondition(this)
             DoingType.Block -> Block(this)
             DoingType.TryBlock -> TryBlock(this)
+            DoingType.Spawn -> Spawn(this)
             else -> {
                 TOER("Wrong Doing")
             }

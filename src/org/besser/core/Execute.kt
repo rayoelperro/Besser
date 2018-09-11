@@ -529,6 +529,31 @@ class Execute(action: Parser): Doing(action, action.levels) {
                 action.changeDoing(met, arrayOf<Token<*>>(), ins)
                 Token("RES", "NONE")
             }
+        //SPAWN
+            makeStructure("SPAWN", "THEN") -> {
+                action.changeDoing(DoingType.Spawn)
+                Token("RES", "NONE")
+            }
+            makeStructure("SPAWN", "FUNCTION", "ARRAY", "THEN") -> {
+                action.changeDoing(tks[1].value as Fun, tks[2].value as Array<Token<*>>, null, true)
+                Token("RES", "NONE")
+            }
+            makeStructure("SPAWN", "FUNCTION", "THEN") -> {
+                action.changeDoing(tks[1].value as Fun, arrayOf<Token<*>>(), null, true)
+                Token("RES", "NONE")
+            }
+            makeStructure("SPAWN", "INSTANCE", "DOCK", "ID", "ARRAY", "THEN") -> {
+                val ins = (tks[1].value as Instance)
+                val met = ins.base.getMethod(tks[3].value as String)
+                action.changeDoing(met, tks[4].value as Array<Token<*>>, ins, true)
+                Token("RES", "NONE")
+            }
+            makeStructure("SPAWN", "INSTANCE", "DOCK", "ID", "THEN") -> {
+                val ins = (tks[1].value as Instance)
+                val met = ins.base.getMethod(tks[3].value as String)
+                action.changeDoing(met, arrayOf<Token<*>>(), ins, true)
+                Token("RES", "NONE")
+            }
             else -> {
                 when {
                     tks.lineStructure().joinToString(" ").startsWith(makeStructure("YIELD", "COLON")) -> {
@@ -597,6 +622,12 @@ class Execute(action: Parser): Doing(action, action.levels) {
                             TOER("Only java elements have static fields")
                         }
                     }
+                    tks.lineStructure().joinToString(" ").startsWith(makeStructure("SPAWN", "FUNCTION", "COLON")) -> {
+                        val args = tks.copyOfRange(3, tks.lineStructure().size)
+                        wrongArray(args)
+                        Spawn.spawnFun(tks[1].value as Fun, args)
+                        Token("RES", "NONE")
+                    }
                     tks.lineStructure().joinToString(" ").startsWith(makeStructure("FUNCTION", "COLON")) -> {
                         val args = tks.copyOfRange(2, tks.lineStructure().size)
                         wrongArray(args)
@@ -606,6 +637,12 @@ class Execute(action: Parser): Doing(action, action.levels) {
                         val args = tks.copyOfRange(2, tks.lineStructure().size)
                         wrongArray(args)
                         Token(INSTANCE_TOKEN, (tks[0].value as Elem).getInstance(args))
+                    }
+                    tks.lineStructure().joinToString(" ").startsWith(makeStructure("SPAWN", "INSTANCE", "DOCK", "ID", "COLON")) -> {
+                        val args = tks.copyOfRange(5, tks.lineStructure().size)
+                        wrongArray(args)
+                        Spawn.spawnFun((tks[1].value as Instance).base.getMethod(tks[3].value as String), args, (tks[1].value as Instance))
+                        Token("RES", "NONE")
                     }
                     tks.lineStructure().joinToString(" ").startsWith(makeStructure("INSTANCE", "DOCK", "ID", "COLON")) -> {
                         val args = tks.copyOfRange(4, tks.lineStructure().size)

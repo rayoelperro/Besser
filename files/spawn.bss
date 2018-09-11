@@ -1,0 +1,23 @@
+elem control then
+    set mine as STR
+end
+
+fun xq of @control then
+    set e = (get 0)
+    set i = true
+    while true then
+        if @i then
+            self mine = ((self mine) + @e)
+            set i = false
+        else
+            set i = true
+        end
+        yield: (self mine)
+    end
+end
+
+set ins = (@control: '')
+
+spawn @ins.xq (:'u') then
+    print (get 0)
+end

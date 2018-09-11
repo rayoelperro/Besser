@@ -17,5 +17,6 @@ enum class DoingType {
     Isolated,
     TryBlock,
     RepeatLoop,
-    Closure
+    Closure,
+    Spawn
 }

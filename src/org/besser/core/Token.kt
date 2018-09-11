@@ -53,8 +53,8 @@ fun Array<Token<*>>.getVars(con: Context): Array<Token<*>> {
     return toret.toTypedArray()
 }
 
-val Keywords = arrayOf("print", "read", "fun", "elem", "of", "self", "then", "end", "get", "set", "as", "import", "if", "else", "while", "when", "book", "for", "event", "repeat", "until", "on", "size", "isolated", "try", "except", "yield", "chan", "NUM", "STR", "BOOL", "ELEM", "ARRAY", "CHANNEL", "JBYTE", "JSHORT", "JINT", "JLONG", "JFLOAT", "JDOUBLE", "JNULL")
-val Keywords_Name = arrayOf("PRINT", "READ", "FUN", "ELEM", "OF", "SELF", "THEN", "END", "GET", "SET", "AS", "IMPORT", "IF", "ELSE", "WHILE", "WHEN", "BOOK", "FOR", "EVENTK", "REPEAT", "UNTIL", "ON", "SIZE", "ISOLATED", "TRY", "EXCEPT", "YIELD", "CHAN", "NUMT", "STRT", "BOOLT", "ELEMT", "ARRAYT", "CHANT", "JBYTET", "JSHORTT", "JINTT", "JLONGT", "JFLOATT", "JDOUBLET", "JNULLT")
+val Keywords = arrayOf("print", "read", "fun", "elem", "of", "self", "then", "end", "get", "set", "as", "import", "if", "else", "while", "when", "book", "for", "event", "repeat", "until", "on", "size", "isolated", "try", "except", "yield", "spawn", "chan", "NUM", "STR", "BOOL", "ELEM", "ARRAY", "CHANNEL", "JBYTE", "JSHORT", "JINT", "JLONG", "JFLOAT", "JDOUBLE", "JNULL")
+val Keywords_Name = arrayOf("PRINT", "READ", "FUN", "ELEM", "OF", "SELF", "THEN", "END", "GET", "SET", "AS", "IMPORT", "IF", "ELSE", "WHILE", "WHEN", "BOOK", "FOR", "EVENTK", "REPEAT", "UNTIL", "ON", "SIZE", "ISOLATED", "TRY", "EXCEPT", "YIELD", "SPAWN", "CHAN", "NUMT", "STRT", "BOOLT", "ELEMT", "ARRAYT", "CHANT", "JBYTET", "JSHORTT", "JINTT", "JLONGT", "JFLOATT", "JDOUBLET", "JNULLT")
 
 val Operators = arrayOf("+", "-", "*", "/", "%", "<", ">", "&", "|", "^", "(", ")", "=", "!", ":", ".")
 val Operators_Name = arrayOf("PLUS", "MINUS", "TIMES", "DIVIDED", "MOD", "LESS", "GREATER", "AND", "OR", "XOR", "OPEN", "CLOSE", "EQUALS", "NOT", "COLON", "DOCK")
