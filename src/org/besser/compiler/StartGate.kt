@@ -58,7 +58,7 @@ fun main(args: Array<String>) {
         parse.parse(lexic.getTokensPerLine() as Array<Array<Token<*>>>)
     } else if (args.isEmpty()) {
         val parse: Parser = Parser(levels)
-        val file = true
+        val file = false
         if (file) {
             val lines: Array<String> = arrayOf(*(File(readLine()).readLines(charset("UTF-8")).toTypedArray()))
             val lexic: Lexer = Lexer(lines)

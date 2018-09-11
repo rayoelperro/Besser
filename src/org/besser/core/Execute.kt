@@ -508,8 +508,38 @@ class Execute(action: Parser): Doing(action, action.levels) {
                 (tks[2].value as Array<Token<*>>)[(tks[0].value as String).toInt()] = tks[4]
                 Token("RES", "NONE")
             }
+        //FUNCTION
+            makeStructure("FUNCTION", "ARRAY", "THEN") -> {
+                action.changeDoing(tks[0].value as Fun, tks[1].value as Array<Token<*>>)
+                Token("RES", "NONE")
+            }
+            makeStructure("FUNCTION", "THEN") -> {
+                action.changeDoing(tks[0].value as Fun, arrayOf<Token<*>>())
+                Token("RES", "NONE")
+            }
+            makeStructure("INSTANCE", "DOCK", "ID", "ARRAY", "THEN") -> {
+                val ins = (tks[0].value as Instance)
+                val met = ins.base.getMethod(tks[2].value as String)
+                action.changeDoing(met, tks[3].value as Array<Token<*>>, ins)
+                Token("RES", "NONE")
+            }
+            makeStructure("INSTANCE", "DOCK", "ID", "THEN") -> {
+                val ins = (tks[0].value as Instance)
+                val met = ins.base.getMethod(tks[2].value as String)
+                action.changeDoing(met, arrayOf<Token<*>>(), ins)
+                Token("RES", "NONE")
+            }
             else -> {
                 when {
+                    tks.lineStructure().joinToString(" ").startsWith(makeStructure("YIELD", "COLON")) -> {
+                        if (levels.last().funyield != null){
+                            val args = tks.copyOfRange(2, tks.lineStructure().size)
+                            wrongArray(args)
+                            (levels.last().funyield as Fun).exec(args)
+                        } else {
+                            TOER("There is no closure function to call")
+                        }
+                    }
                     tks.lineStructure().joinToString(" ").startsWith(makeStructure("ARRAY", "ON")) -> {
                         val args = tks.copyOfRange(2, tks.lineStructure().size)
                         wrongTypes(args)

@@ -1,0 +1,14 @@
+elem list then
+    set arr as ARRAY
+end
+
+fun each of @list then
+   for x of (self arr) then
+    yield: @x
+   end
+end
+
+set my_list = (@list: (:'One''Two''Three'))
+@my_list.each then
+    print (get 0)
+end

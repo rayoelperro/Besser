@@ -62,6 +62,11 @@ class Parser(val levels: MutableList<Context>) {
         return actualDoing.run(tks)
     }
 
+    fun changeDoing(func : Fun, array: Array<Token<*>>, ins : Instance? = null) {
+        actualDoingType = DoingType.Closure
+        actualDoing = Closure(this, func, array, ins)
+    }
+
     fun changeDoing(array: Array<Token<*>>) {
         actualDoingType = DoingType.Isolated
         actualDoing = Isolated(this, array)
