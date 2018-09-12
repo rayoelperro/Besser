@@ -9,7 +9,7 @@ Besser is a general-purpose programming language developed on kotlin
 # this is a comment
 'this is a string'
 24 # this is a number
-24.4 # this is another number
+24,4 # this is another number. Decimals are separated with a comma instead of a dock
 true # this is a bool
 false # this is another bool
 :'STR' 2 false 4 true # this is an array
@@ -19,6 +19,17 @@ chan 3
 chan false
 chan (:1 3)
 chan (chan 'smt')
+```
+
+### Variables:
+```
+set x = 'hello'
+print @x # hello
+set y = (@x + ' world')
+print @y # hello world
+set y = 10
+print @y # Error!
+print (@y as STR) # 10
 ```
 
 #### Functions:
@@ -31,6 +42,22 @@ fun my_fun then
 end
 
 @my_fun: 'One' 'Two' 'Three'
+```
+
+### Channels:
+```
+# Channels are used to get access to a reserved place in the memory
+# Functions and closures can change global scope, however they can change channels scope
+# Also you can send a channel through functions and elems in different libraries
+
+set x = (chan 'hello') # Channel of strings, Channels can change their type with the assignment of a new value just like normal variables
+set y = 'hello' # normal variable
+fun change_xy then
+  @x.set = 'bye'
+  set y = 'bye'
+end
+print (@x.get) #bye
+print @y #hello
 ```
 
 #### Elements:
@@ -139,5 +166,49 @@ event longname of @ins repeat rep until unt
 
 on @longname then
     print (self name)
+end
+```
+
+#### Closures:
+```
+fun some_fun then
+  yield: 'hello'
+end
+
+@some_fun then
+  print (get 0) //hello
+end
+
+fun plus then
+  yield: ((get 0) + (get 1))
+end
+
+@plus (:2 3) then
+  print ((get 0) as STR)
+end
+```
+
+#### Threads:
+```
+fun my_spawned_fun then
+  set k = (get 0)
+  while true then
+    print @k
+  end
+end
+
+spawn @my_spawned_fun: 'Hello'
+
+# Also you can
+fun my_spawned_fun then
+  set k = (get 0)
+  yield: @k
+end
+
+spawn @my_spawned_fun (:'Hi!') then
+  set e = (get 0)
+  while true
+    print @e
+  end
 end
 ```
