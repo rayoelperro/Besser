@@ -2,7 +2,7 @@ elem control then
     set mine as STR
 end
 
-fun xq of @control then
+fun plus_ever of @control then
     set e = (get 0)
     set i = true
     while true then
@@ -18,6 +18,6 @@ end
 
 set ins = (@control: '')
 
-spawn @ins.xq (:'u') then
+spawn @ins.plus_ever (:'u') then
     print (get 0)
 end

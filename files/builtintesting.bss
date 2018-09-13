@@ -1,0 +1,2 @@
+set my = (@FILE: 'C:\Users\rayoe\IdeaProjects\Besser\files\errors.bss')
+print (@my.get)

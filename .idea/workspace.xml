@@ -7,25 +7,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ebe89dd-cb93-48db-991e-17d821259bc1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/files/spawn.bss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/org/besser/core/Spawn.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Besser/org/besser/compiler/StartGateKt.class" afterPath="$PROJECT_DIR$/out/production/Besser/org/besser/compiler/StartGateKt.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/files/builtintesting.bss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/org/besser/core/BuiltIn.kt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Besser/META-INF/Besser.kotlin_module" afterPath="$PROJECT_DIR$/out/production/Besser/META-INF/Besser.kotlin_module" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Besser/org/besser/core/Channel.class" afterPath="$PROJECT_DIR$/out/production/Besser/org/besser/core/Channel.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Besser/org/besser/core/Context$Companion.class" afterPath="$PROJECT_DIR$/out/production/Besser/org/besser/core/Context$Companion.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Besser/org/besser/core/Context.class" afterPath="$PROJECT_DIR$/out/production/Besser/org/besser/core/Context.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Besser/org/besser/core/ContextType.class" afterPath="$PROJECT_DIR$/out/production/Besser/org/besser/core/ContextType.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Besser/org/besser/core/DoingType.class" afterPath="$PROJECT_DIR$/out/production/Besser/org/besser/core/DoingType.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Besser/org/besser/core/ErrorsKt.class" afterPath="$PROJECT_DIR$/out/production/Besser/org/besser/core/ErrorsKt.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Besser/org/besser/core/Execute.class" afterPath="$PROJECT_DIR$/out/production/Besser/org/besser/core/Execute.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Besser/org/besser/core/Parser$WhenMappings.class" afterPath="$PROJECT_DIR$/out/production/Besser/org/besser/core/Parser$WhenMappings.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Besser/org/besser/core/Parser.class" afterPath="$PROJECT_DIR$/out/production/Besser/org/besser/core/Parser.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Besser/org/besser/core/TokenKt.class" afterPath="$PROJECT_DIR$/out/production/Besser/org/besser/core/TokenKt.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Besser/org/besser/core/Fun.class" afterPath="$PROJECT_DIR$/out/production/Besser/org/besser/core/Fun.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Besser/org/besser/core/RuntimeKt.class" afterPath="$PROJECT_DIR$/out/production/Besser/org/besser/core/RuntimeKt.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/besser/compiler/StartGate.kt" afterPath="$PROJECT_DIR$/src/org/besser/compiler/StartGate.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/besser/core/Closure.kt" afterPath="$PROJECT_DIR$/src/org/besser/core/Closure.kt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/files/spawn.bss" afterPath="$PROJECT_DIR$/files/spawn.bss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/besser/core/Channel.kt" afterPath="$PROJECT_DIR$/src/org/besser/core/Channel.kt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/besser/core/Context.kt" afterPath="$PROJECT_DIR$/src/org/besser/core/Context.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/besser/core/ContextType.kt" afterPath="$PROJECT_DIR$/src/org/besser/core/ContextType.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/besser/core/DoingType.kt" afterPath="$PROJECT_DIR$/src/org/besser/core/DoingType.kt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/besser/core/Errors.kt" afterPath="$PROJECT_DIR$/src/org/besser/core/Errors.kt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/besser/core/Execute.kt" afterPath="$PROJECT_DIR$/src/org/besser/core/Execute.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/besser/core/Parser.kt" afterPath="$PROJECT_DIR$/src/org/besser/core/Parser.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/besser/core/Token.kt" afterPath="$PROJECT_DIR$/src/org/besser/core/Token.kt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/besser/core/Fun.kt" afterPath="$PROJECT_DIR$/src/org/besser/core/Fun.kt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/besser/core/Runtime.kt" afterPath="$PROJECT_DIR$/src/org/besser/core/Runtime.kt" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,56 +36,15 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="Execute.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/besser/core/Execute.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="549" column="13" lean-forward="true" selection-start-line="549" selection-start-column="13" selection-end-line="549" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Parser.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/besser/core/Parser.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="129">
-              <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Fun.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/besser/core/Fun.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="146">
-              <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="spawn.bss" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/files/spawn.bss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="18" lean-forward="false" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Kotlin Enum" />
-        <option value="Kotlin File" />
         <option value="Class" />
         <option value="Kotlin Class" />
+        <option value="Kotlin File" />
       </list>
     </option>
   </component>
@@ -107,9 +65,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/org/besser/core/MethodToFun.kt" />
-        <option value="$PROJECT_DIR$/src/org/besser/core/WhileLoop.kt" />
-        <option value="$PROJECT_DIR$/src/org/besser/core/ForLoop.kt" />
         <option value="$PROJECT_DIR$/src/org/besser/core/WhenCondition.kt" />
         <option value="$PROJECT_DIR$/src/org/besser/core/Lexer.kt" />
         <option value="$PROJECT_DIR$/src/org/besser/core/Pointer.kt" />
@@ -124,11 +79,9 @@
         <option value="$PROJECT_DIR$/src/org/besser/core/Loader.kt" />
         <option value="$PROJECT_DIR$/files/event.bss" />
         <option value="$PROJECT_DIR$/src/org/besser/core/TryBlock.kt" />
-        <option value="$PROJECT_DIR$/src/org/besser/core/Channel.kt" />
         <option value="$PROJECT_DIR$/src/org/besser/core/JavaElem.kt" />
         <option value="$PROJECT_DIR$/src/org/besser/core/runtime.kt" />
         <option value="$PROJECT_DIR$/src/org/besser/core/Elem.kt" />
-        <option value="$PROJECT_DIR$/src/org/besser/core/Errors.kt" />
         <option value="$PROJECT_DIR$/src/org/besser/core/Instance.kt" />
         <option value="$PROJECT_DIR$/src/org/besser/core/JavaInstance2.java" />
         <option value="$PROJECT_DIR$/files/view.bss" />
@@ -143,21 +96,26 @@
         <option value="$PROJECT_DIR$/src/org/besser/core/IfCondition.kt" />
         <option value="$PROJECT_DIR$/files/strings.bss" />
         <option value="$PROJECT_DIR$/files/strtest.bss" />
-        <option value="$PROJECT_DIR$/files/blocks.bss" />
         <option value="$PROJECT_DIR$/files/channels.bss" />
         <option value="$PROJECT_DIR$/files/variables.bss" />
-        <option value="$PROJECT_DIR$/src/org/besser/core/Fun.kt" />
         <option value="$PROJECT_DIR$/files/closure.bss" />
         <option value="$PROJECT_DIR$/src/org/besser/core/Token.kt" />
         <option value="$PROJECT_DIR$/src/org/besser/core/ContextType.kt" />
         <option value="$PROJECT_DIR$/src/org/besser/core/DoingType.kt" />
-        <option value="$PROJECT_DIR$/src/org/besser/core/Spawn.kt" />
         <option value="$PROJECT_DIR$/src/org/besser/compiler/StartGate.kt" />
         <option value="$PROJECT_DIR$/src/org/besser/core/Parser.kt" />
         <option value="$PROJECT_DIR$/src/org/besser/core/Closure.kt" />
-        <option value="$PROJECT_DIR$/src/org/besser/core/Execute.kt" />
-        <option value="$PROJECT_DIR$/src/org/besser/core/Context.kt" />
+        <option value="$PROJECT_DIR$/src/org/besser/core/Spawn.kt" />
         <option value="$PROJECT_DIR$/files/spawn.bss" />
+        <option value="$PROJECT_DIR$/files/blocks.bss" />
+        <option value="$PROJECT_DIR$/src/org/besser/core/Channel.kt" />
+        <option value="$PROJECT_DIR$/src/org/besser/core/Fun.kt" />
+        <option value="$PROJECT_DIR$/src/org/besser/core/Errors.kt" />
+        <option value="$PROJECT_DIR$/src/org/besser/core/Execute.kt" />
+        <option value="$PROJECT_DIR$/src/org/besser/core/Runtime.kt" />
+        <option value="$PROJECT_DIR$/src/org/besser/core/Context.kt" />
+        <option value="$PROJECT_DIR$/src/org/besser/core/BuiltIn.kt" />
+        <option value="$PROJECT_DIR$/files/builtintesting.bss" />
       </list>
     </option>
   </component>
@@ -182,6 +140,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -269,8 +229,6 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -613,13 +571,13 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2846975" sideWeight="0.5051395" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3338346" sideWeight="0.4948605" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3338346" sideWeight="0.4948605" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932332" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33039647" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33039647" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -674,31 +632,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/org/besser/core/TryBlock.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="23" column="13" lean-forward="false" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/besser/core/OnEvent.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/besser/core/Loader.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="359">
           <caret line="27" column="1" lean-forward="true" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/besser/core/GetFromFile.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="1" lean-forward="true" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -766,20 +703,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/besser/core/Lexer.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1115">
-          <caret line="81" column="24" lean-forward="true" selection-start-line="81" selection-start-column="24" selection-end-line="81" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/besser/core/Runtime.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="12" lean-forward="false" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/besser/core/JavaInstance.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="382">
@@ -808,31 +731,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/files/blocks.bss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="25" lean-forward="false" selection-start-line="0" selection-start-column="25" selection-end-line="0" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/files/channels.bss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="11" lean-forward="false" selection-start-line="0" selection-start-column="11" selection-end-line="0" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/files/errors.bss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="21" lean-forward="false" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/files/factorial.bss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="19" lean-forward="true" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -843,31 +745,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/files/strings.bss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="16" lean-forward="true" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/files/strtest.bss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="14" lean-forward="false" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/files/variables.bss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="17" lean-forward="true" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/files/view.bss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="10" lean-forward="true" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -882,7 +763,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="3" lean-forward="true" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -890,7 +770,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="27" lean-forward="false" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -898,14 +777,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="25" lean-forward="false" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/besser/core/Errors.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
           <folding />
         </state>
       </provider>
@@ -936,23 +807,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="32" lean-forward="false" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/besser/core/Channel.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="21" lean-forward="false" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/besser/core/ContextType.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="9" lean-forward="false" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -960,7 +814,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="20" column="9" lean-forward="false" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -968,17 +821,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
           <caret line="15" column="37" lean-forward="false" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/besser/compiler/StartGate.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="29" column="23" lean-forward="false" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
-          <folding>
-            <element signature="e#29#167#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -998,50 +840,167 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/besser/core/Parser.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/besser/core/Spawn.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/besser/core/Fun.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/besser/core/Context.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="37" column="25" lean-forward="false" selection-start-line="37" selection-start-column="25" selection-end-line="37" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/besser/core/Execute.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="549" column="13" lean-forward="true" selection-start-line="549" selection-start-column="13" selection-end-line="549" selection-end-column="13" />
+          <caret line="9" column="24" lean-forward="false" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/files/spawn.bss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="18" lean-forward="false" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+        <state relative-caret-position="374">
+          <caret line="22" column="3" lean-forward="false" selection-start-line="22" selection-start-column="3" selection-end-line="22" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/besser/core/Lexer.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1355">
+          <caret line="81" column="24" lean-forward="true" selection-start-line="81" selection-start-column="24" selection-end-line="81" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/files/blocks.bss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/besser/core/Parser.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="16" lean-forward="false" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/besser/core/ContextType.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="9" lean-forward="false" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/besser/core/GetFromFile.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/besser/core/Fun.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="9" lean-forward="false" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/besser/core/Errors.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="37" lean-forward="false" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/besser/core/Runtime.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="25" lean-forward="false" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/besser/core/Execute.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="514">
+          <caret line="89" column="57" lean-forward="false" selection-start-line="89" selection-start-column="57" selection-end-line="89" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/besser/core/Channel.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/files/view.bss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="10" lean-forward="true" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/files/variables.bss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="17" lean-forward="true" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/files/strings.bss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="16" lean-forward="true" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/files/factorial.bss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="19" lean-forward="true" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/files/errors.bss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="21" lean-forward="false" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/besser/compiler/StartGate.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/besser/core/Context.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="747">
+          <caret line="52" column="1" lean-forward="true" selection-start-line="52" selection-start-column="1" selection-end-line="52" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/besser/core/BuiltIn.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="35" column="5" lean-forward="false" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/files/builtintesting.bss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="15" lean-forward="true" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="15" />
           <folding />
         </state>
       </provider>

@@ -8,7 +8,7 @@ open class Fun(val name : String, val context : MutableList<Context>, val scon :
     val lines: MutableList<Array<Token<*>>> = mutableListOf()
     var end_var: String? = null
 
-    fun exec(args: Array<Token<*>>, instance: Instance? = null, yield_fun : Fun? = null): Token<*> {
+    open fun exec(args: Array<Token<*>>, instance: Instance? = null, yield_fun : Fun? = null): Token<*> {
         context.add(Context(scon, ContextType.Function))
         context.last().self = instance
         context.last().funyield = yield_fun

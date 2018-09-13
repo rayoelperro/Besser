@@ -83,6 +83,12 @@ class Execute(action: Parser): Doing(action, action.levels) {
                 else
                     Token("RES", "NONE")
             }
+            makeStructure("EXCEPT", "ON", "ARRAY") -> {
+                if (canCompile(tks[2].value as Array<Token<*>>))
+                    Token("RES", "NONE")
+                else
+                    throw BesserIncompatibleCompilerError()
+            }
         //BLOCKS
             makeStructure("THEN") -> {
                 action.changeDoing(DoingType.Block)
@@ -321,7 +327,7 @@ class Execute(action: Parser): Doing(action, action.levels) {
             }
         //OR
             makeStructure("BOOL", "OR", "BOOL") -> {
-                Token("BOOL", ((tks[0].value as String).toBoolean() || (tks[2].value as String).toBoolean()))
+                Token("BOOL", ((tks[0].value as String).toBoolean() || (tks[2].value as String).toBoolean()).toString())
             }
         //XOR
             makeStructure("BOOL", "XOR", "BOOL") -> {

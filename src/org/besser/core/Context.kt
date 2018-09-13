@@ -19,11 +19,18 @@ class Context : LinkedHashMap<String, Token<*>> {
         }
     }
 
-    constructor(args: Array<String>): super(){
+    constructor(): super() {
+        type = ContextType.Global
+        arguments = mutableListOf()
+    }
+
+    constructor(args: Array<String>): super() {
         type = ContextType.Global
         arguments = mutableListOf()
         for (arg in args)
             arguments.add(Token("STRING", arg))
+        for (b in BuiltIn())
+            this[b.key] = b.value
     }
 
     constructor(args: Array<Token<*>>, type: ContextType): super(){
@@ -31,6 +38,8 @@ class Context : LinkedHashMap<String, Token<*>> {
         arguments = mutableListOf()
         for (arg in args)
             arguments.add(arg)
+        for (b in BuiltIn())
+            this[b.key] = b.value
     }
 
     constructor(upper : Context, type : ContextType): super(){
