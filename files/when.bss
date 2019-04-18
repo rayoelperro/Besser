@@ -1,0 +1,12 @@
+set w = (read 'W: ')
+
+when then
+    |@w = 'hey'
+        print 'Hello'
+    |@w = 'bye'
+        print 'Good bye'
+    |(size @w) = 3
+        print 'Word length is 3'
+    |true
+        print 'I did not understand'
+end

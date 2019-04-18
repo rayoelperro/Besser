@@ -46,6 +46,12 @@ fun Array<Token<*>>.getVars(con: Context): Array<Token<*>> {
             } else {
                 TOER("Reference to undeclared variable: ${it.value}")
             }
+        } else if (it.id == "YIELD") {
+            if (con.funyield != null){
+                toret += Token(FUNCTION_TOKEN, con.funyield)
+            } else {
+                TOER("There is no closure function to call")
+            }
         } else {
             toret += it
         }

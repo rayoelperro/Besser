@@ -11,7 +11,7 @@ class TryBlock(parser : Parser) : Doing(parser, parser.levels) {
     private var deep = 1
 
     fun exe() {
-        var lsize = levels.size
+        val lsize = levels.size
         try {
             levels.add(Context(levels.last(), ContextType.Try))
             Parser(levels).parse(trylines.toTypedArray()) // This is where the error could raise

@@ -17,5 +17,5 @@ fun canCompile(arr : Array<Token<*>>) : Boolean {
     return r
 }
 
-const val COMPILER = "KBSS"
+const val COMPILER = "KTBSS"
 var line = 0

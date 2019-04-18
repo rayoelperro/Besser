@@ -36,6 +36,10 @@ class IfCondition(parser : Parser, val condition : Boolean) : Doing(parser, pars
                         TOER("More than one else statement")
                     }
                     pass_else = true
+                } else {
+                    if (condition xor pass_else) {
+                        lines += tks
+                    }
                 }
             }
             else -> {

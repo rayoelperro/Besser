@@ -1,4 +1,4 @@
-get (:'join_in_str' 'concat' 'to_java_str' 'to_java_str_builder' 'str') of 'files/strings.bss'
+get (:'split' 'join_in_str' 'concat' 'to_java_str' 'to_java_str_builder' 'str') of 'files/strings.bss'
 
 if false then
     set arr:
@@ -13,8 +13,14 @@ if false then
 
     print (@concat: 'Hello, I am: ' (read 'Type your name please: ') ' from ' (read 'Type your city please: '))
 else
-    set s = (@to_java_str_builder: (@to_java_str: ''))
-    @s.append: (read)
-    @s.append: (read)
-    print (@str: (@to_java_str: @s))
+    if false then
+        set s = (@to_java_str_builder: (@to_java_str: ''))
+        @s.append: (read)
+        @s.append: (read)
+        print (@str: (@to_java_str: @s))
+    else
+        for v of (@split: ',' (read 'Type something: ')) then
+            print @v
+        end
+    end
 end

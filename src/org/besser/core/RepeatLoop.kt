@@ -28,9 +28,6 @@ class RepeatLoop(parser : Parser, val times : Int, val variable : String? = null
                 if (deep == 0){
                     save()
                 } else {
-                    if (cheks.lineStructure().joinToString(" ").endsWith("THEN")) {
-                        deep++
-                    }
                     lines += tks
                 }
             }

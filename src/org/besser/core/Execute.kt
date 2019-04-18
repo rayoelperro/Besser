@@ -8,63 +8,29 @@ class Execute(action: Parser): Doing(action, action.levels) {
         //println(Arrays.deepToString(tks))
         return when (tks.lineStructure().joinToString(" ")) {
         //SINGLE TYPES
-            makeStructure("NUMBER") -> tks[0]
-            makeStructure("STRING") -> tks[0]
-            makeStructure("BOOL") -> tks[0]
-            makeStructure("INSTANCE") -> tks[0]
-            makeStructure("ARRAY") -> tks[0]
+            makeStructure("NUMBER"),
+            makeStructure("STRING"),
+            makeStructure("BOOL"),
+            makeStructure("INSTANCE"),
+            makeStructure("ARRAY"),
             makeStructure("CHANNEL") -> tks[0]
-        //REPEAT
-            makeStructure("REPEAT", "NUMBER", "THEN") -> {
-                action.changeDoing((tks[1].value as String).toDouble().toInt(), null)
-                Token("RES", "NONE")
-            }
-            makeStructure("REPEAT", "NUMBER", "AS", "ID", "THEN") -> {
-                action.changeDoing((tks[1].value as String).toDouble().toInt(), tks[3].value as String)
-                Token("RES", "NONE")
-            }
         //CHANNEL
-            makeStructure("CHAN", "NUMBER") -> {
-                Token(CHANNEL_TOKEN, Channel(tks[1]))
-            }
-            makeStructure("CHAN", "STRING") -> {
-                Token(CHANNEL_TOKEN, Channel(tks[1]))
-            }
-            makeStructure("CHAN", "BOOL") -> {
-                Token(CHANNEL_TOKEN, Channel(tks[1]))
-            }
-            makeStructure("CHAN", "INSTANCE") -> {
-                Token(CHANNEL_TOKEN, Channel(tks[1]))
-            }
-            makeStructure("CHAN", "ARRAY") -> {
-                Token(CHANNEL_TOKEN, Channel(tks[1]))
-            }
+            makeStructure("CHAN", "NUMBER"),
+            makeStructure("CHAN", "STRING"),
+            makeStructure("CHAN", "BOOL"),
+            makeStructure("CHAN", "INSTANCE"),
+            makeStructure("CHAN", "ARRAY"),
             makeStructure("CHAN", "CHANNEL") -> {
                 Token(CHANNEL_TOKEN, Channel(tks[1]))
             }
             makeStructure("CHANNEL", "DOCK", "GET") -> {
                 (tks[0].value as Channel).get()
             }
-            makeStructure("CHANNEL", "DOCK", "SET", "EQUALS", "NUMBER") -> {
-                (tks[0].value as Channel).set(tks[4])
-                Token("RES", "NONE")
-            }
-            makeStructure("CHANNEL", "DOCK", "SET", "EQUALS", "STRING") -> {
-                (tks[0].value as Channel).set(tks[4])
-                Token("RES", "NONE")
-            }
-            makeStructure("CHANNEL", "DOCK", "SET", "EQUALS", "BOOL") -> {
-                (tks[0].value as Channel).set(tks[4])
-                Token("RES", "NONE")
-            }
-            makeStructure("CHANNEL", "DOCK", "SET", "EQUALS", "INSTANCE") -> {
-                (tks[0].value as Channel).set(tks[4])
-                Token("RES", "NONE")
-            }
-            makeStructure("CHANNEL", "DOCK", "SET", "EQUALS", "ARRAY") -> {
-                (tks[0].value as Channel).set(tks[4])
-                Token("RES", "NONE")
-            }
+            makeStructure("CHANNEL", "DOCK", "SET", "EQUALS", "NUMBER"),
+            makeStructure("CHANNEL", "DOCK", "SET", "EQUALS", "STRING"),
+            makeStructure("CHANNEL", "DOCK", "SET", "EQUALS", "BOOL"),
+            makeStructure("CHANNEL", "DOCK", "SET", "EQUALS", "INSTANCE"),
+            makeStructure("CHANNEL", "DOCK", "SET", "EQUALS", "ARRAY"),
             makeStructure("CHANNEL", "DOCK", "SET", "EQUALS", "CHANNEL") -> {
                 (tks[0].value as Channel).set(tks[4])
                 Token("RES", "NONE")
@@ -88,6 +54,15 @@ class Execute(action: Parser): Doing(action, action.levels) {
                     Token("RES", "NONE")
                 else
                     throw BesserIncompatibleCompilerError()
+            }
+        //REPEAT
+            makeStructure("REPEAT", "NUMBER", "THEN") -> {
+                action.changeDoing((tks[1].value as String).toDouble().toInt(), null)
+                Token("RES", "NONE")
+            }
+            makeStructure("REPEAT", "NUMBER", "AS", "ID", "THEN") -> {
+                action.changeDoing((tks[1].value as String).toDouble().toInt(), tks[3].value as String)
+                Token("RES", "NONE")
             }
         //BLOCKS
             makeStructure("THEN") -> {
@@ -153,13 +128,6 @@ class Execute(action: Parser): Doing(action, action.levels) {
                 println(tks[1].value)
                 Token("RES", "NONE")
             }
-            makeStructure("PRINT", "BOOL", "STRING") -> {
-                if ((tks[1].value as String).toBoolean())
-                    println(tks[2].value)
-                else
-                    print(tks[2].value)
-                Token("RES", "NONE")
-            }
         //GET
             makeStructure("GET", "NUMBER") -> levels.last().arguments[(tks[1].value as String).toDouble().toInt()]
             makeStructure("GET", "ARRAY", "OF", "STRING") -> {
@@ -178,26 +146,11 @@ class Execute(action: Parser): Doing(action, action.levels) {
                 Token("RES", "NONE")
             }
         //SET
-            makeStructure("SET", "ID", "EQUALS", "NUMBER") -> {
-                levels.last()["@" + tks[1].value as String] = tks[3]
-                Token("RES", "NONE")
-            }
-            makeStructure("SET", "ID", "EQUALS", "STRING") -> {
-                levels.last()["@" + tks[1].value as String] = tks[3]
-                Token("RES", "NONE")
-            }
-            makeStructure("SET", "ID", "EQUALS", "BOOL") -> {
-                levels.last()["@" + tks[1].value as String] = tks[3]
-                Token("RES", "NONE")
-            }
-            makeStructure("SET", "ID", "EQUALS", "INSTANCE") -> {
-                levels.last()["@" + tks[1].value as String] = tks[3]
-                Token("RES", "NONE")
-            }
-            makeStructure("SET", "ID", "EQUALS", "ARRAY") -> {
-                levels.last()["@" + tks[1].value as String] = tks[3]
-                Token("RES", "NONE")
-            }
+            makeStructure("SET", "ID", "EQUALS", "NUMBER"),
+            makeStructure("SET", "ID", "EQUALS", "STRING"),
+            makeStructure("SET", "ID", "EQUALS", "BOOL"),
+            makeStructure("SET", "ID", "EQUALS", "INSTANCE"),
+            makeStructure("SET", "ID", "EQUALS", "ARRAY"),
             makeStructure("SET", "ID", "EQUALS", "CHANNEL") -> {
                 levels.last()["@" + tks[1].value as String] = tks[3]
                 Token("RES", "NONE")
@@ -242,6 +195,13 @@ class Execute(action: Parser): Doing(action, action.levels) {
             makeStructure("GET", "AS", "ARRAYT") -> {
                 Token("ARRAY", levels.last().arguments.toTypedArray())
             }
+            makeStructure("STRING", "AS", "ARRAYT") -> {
+                val a = mutableListOf<Token<*>>()
+                for (i in tks[0].value as String) {
+                    a += Token("STRING", i.toString())
+                }
+                Token("ARRAY", a.toTypedArray())
+            }
         //PLUS
             makeStructure("NUMBER", "PLUS", "NUMBER") -> {
                 Token("NUMBER", ((tks[0].value as String).toDouble() + (tks[2].value as String).toDouble()).toString())
@@ -270,6 +230,11 @@ class Execute(action: Parser): Doing(action, action.levels) {
                 Token("ARRAY", ar.toTypedArray())
             }
             makeStructure("ARRAY", "PLUS", "ARRAY") -> {
+                val ar = (tks[0].value as Array<Token<*>>).toMutableList()
+                ar.add(tks[2])
+                Token("ARRAY", ar.toTypedArray())
+            }
+            makeStructure("ARRAY", "PLUS", "CHANNEL") -> {
                 val ar = (tks[0].value as Array<Token<*>>).toMutableList()
                 ar.add(tks[2])
                 Token("ARRAY", ar.toTypedArray())
@@ -356,6 +321,9 @@ class Execute(action: Parser): Doing(action, action.levels) {
             makeStructure("BOOL", "NOT", "BOOL") -> {
                 Token("BOOL", ((tks[0].value as String).toBoolean() != (tks[2].value as String).toBoolean()).toString())
             }
+            makeStructure("INSTANCE", "NOT", "INSTANCE") -> {
+                Token("BOOL", (tks[0].value as Instance) != (tks[2].value as Instance))
+            }
             makeStructure("NOT", "BOOL") -> {
                 Token("BOOL", (!(tks[1].value as String).toBoolean()).toString())
             }
@@ -380,7 +348,12 @@ class Execute(action: Parser): Doing(action, action.levels) {
                     TOER("Trying to access to unprovided self arguments")
                 }
             }
-            makeStructure("SELF", "ID", "EQUALS", "NUMBER") -> {
+            makeStructure("SELF", "ID", "EQUALS", "NUMBER"),
+            makeStructure("SELF", "ID", "EQUALS", "STRING"),
+            makeStructure("SELF", "ID", "EQUALS", "BOOL"),
+            makeStructure("SELF", "ID", "EQUALS", "INSTANCE"),
+            makeStructure("SELF", "ID", "EQUALS", "ARRAY"),
+            makeStructure("SELF", "ID", "EQUALS", "CHANNEL") -> {
                 if (levels.last().self != null) {
                     val t = (levels.last().self as Instance).properties[tks[1].value as String] as Token<*>
                     if (t.id == tks[3].id)
@@ -392,51 +365,24 @@ class Execute(action: Parser): Doing(action, action.levels) {
                 }
                 Token("RES", "NONE")
             }
-            makeStructure("SELF", "ID", "EQUALS", "STRING") -> {
-                if (levels.last().self != null) {
-                    val t = (levels.last().self as Instance).properties[tks[1].value as String] as Token<*>
-                    if (t.id == tks[3].id)
-                        (levels.last().self as Instance).properties[tks[1].value as String] = tks[3]
-                    else
-                        TOER("Wrong type ${t.id} != ${tks[3].id}")
-                } else {
-                    TOER("Trying to access to unprovided self arguments")
-                }
-                Token("RES", "NONE")
-            }
-            makeStructure("SELF", "ID", "EQUALS", "BOOL") -> {
-                if (levels.last().self != null) {
-                    val t = (levels.last().self as Instance).properties[tks[1].value as String] as Token<*>
-                    if (t.id == tks[3].id)
-                        (levels.last().self as Instance).properties[tks[1].value as String] = tks[3]
-                    else
-                        TOER("Wrong type ${t.id} != ${tks[3].id}")
-                } else {
-                    TOER("Trying to access to unprovided self arguments")
-                }
-                Token("RES", "NONE")
-            }
-            makeStructure("SELF", "ID", "EQUALS", "INSTANCE") -> {
-                if (levels.last().self != null) {
-                    val t = (levels.last().self as Instance).properties[tks[1].value as String] as Token<*>
-                    if (t.id == tks[3].id)
-                        (levels.last().self as Instance).properties[tks[1].value as String] = tks[3]
-                    else
-                        TOER("Wrong type ${t.id} != ${tks[3].id}")
-                } else {
-                    TOER("Trying to access to unprovided self arguments")
-                }
-                Token("RES", "NONE")
-            }
+        //DOCK
             makeStructure("ELEMENT", "DOCK", "ID") -> {
                 if (tks[0].value is JavaElem)
                     (tks[0].value as JavaElem).getField(tks[2].value as String)
                 else
                     TOER("Only java elements have static fields")
             }
-        //DOCK
             makeStructure("INSTANCE", "DOCK", "ID") -> {
                 (tks[0].value as Instance).properties[tks[2].value] as Token<*>
+            }
+            makeStructure("INSTANCE", "DOCK", "ID", "EQUALS", "NUMBER"),
+            makeStructure("INSTANCE", "DOCK", "ID", "EQUALS", "STRING"),
+            makeStructure("INSTANCE", "DOCK", "ID", "EQUALS", "BOOL"),
+            makeStructure("INSTANCE", "DOCK", "ID", "EQUALS", "INSTANCE"),
+            makeStructure("INSTANCE", "DOCK", "ID", "EQUALS", "ARRAY"),
+            makeStructure("INSTANCE", "DOCK", "ID", "EQUALS", "CHANNEL") -> {
+                (tks[0].value as Instance).properties[tks[2].value as String] = tks[4]
+                Token("RES", "NONE")
             }
         //COLON
             makeStructure("NUMBER", "COLON", "NUMBER") -> {
@@ -485,33 +431,18 @@ class Execute(action: Parser): Doing(action, action.levels) {
                 Token("RES", "NONE")
             }
             makeStructure("NUMBER", "OF", "STRING") -> {
-                Token("STRING", (tks[2].value as String)[(tks[0].value as String).toInt()].toString())
+                Token("STRING", (tks[2].value as String)[(tks[0].value as String).toDouble().toInt()].toString())
             }
             makeStructure("NUMBER", "OF", "ARRAY") -> {
-                (tks[2].value as Array<Token<*>>)[(tks[0].value as String).toInt()]
+                (tks[2].value as Array<Token<*>>)[(tks[0].value as String).toDouble().toInt()]
             }
-            makeStructure("NUMBER", "OF", "ARRAY", "EQUALS", "NUMBER") -> {
-                (tks[2].value as Array<Token<*>>)[(tks[0].value as String).toInt()] = tks[4]
-                Token("RES", "NONE")
-            }
-            makeStructure("NUMBER", "OF", "ARRAY", "EQUALS", "STRING") -> {
-                (tks[2].value as Array<Token<*>>)[(tks[0].value as String).toInt()] = tks[4]
-                Token("RES", "NONE")
-            }
-            makeStructure("NUMBER", "OF", "ARRAY", "EQUALS", "BOOL") -> {
-                (tks[2].value as Array<Token<*>>)[(tks[0].value as String).toInt()] = tks[4]
-                Token("RES", "NONE")
-            }
-            makeStructure("NUMBER", "OF", "ARRAY", "EQUALS", "INSTANCE") -> {
-                (tks[2].value as Array<Token<*>>)[(tks[0].value as String).toInt()] = tks[4]
-                Token("RES", "NONE")
-            }
-            makeStructure("NUMBER", "OF", "ARRAY", "EQUALS", "ARRAY") -> {
-                (tks[2].value as Array<Token<*>>)[(tks[0].value as String).toInt()] = tks[4]
-                Token("RES", "NONE")
-            }
-            makeStructure("NUMBER", "OF", "ARRAY", "EQUALS", "POINTER") -> {
-                (tks[2].value as Array<Token<*>>)[(tks[0].value as String).toInt()] = tks[4]
+            makeStructure("NUMBER", "OF", "ARRAY", "EQUALS", "NUMBER"),
+            makeStructure("NUMBER", "OF", "ARRAY", "EQUALS", "STRING"),
+            makeStructure("NUMBER", "OF", "ARRAY", "EQUALS", "BOOL"),
+            makeStructure("NUMBER", "OF", "ARRAY", "EQUALS", "INSTANCE"),
+            makeStructure("NUMBER", "OF", "ARRAY", "EQUALS", "ARRAY"),
+            makeStructure("NUMBER", "OF", "ARRAY", "EQUALS", "CHANNEL") -> {
+                (tks[2].value as Array<Token<*>>)[(tks[0].value as String).toDouble().toInt()] = tks[4]
                 Token("RES", "NONE")
             }
         //FUNCTION
@@ -562,15 +493,6 @@ class Execute(action: Parser): Doing(action, action.levels) {
             }
             else -> {
                 when {
-                    tks.lineStructure().joinToString(" ").startsWith(makeStructure("YIELD", "COLON")) -> {
-                        if (levels.last().funyield != null){
-                            val args = tks.copyOfRange(2, tks.lineStructure().size)
-                            wrongArray(args)
-                            (levels.last().funyield as Fun).exec(args)
-                        } else {
-                            TOER("There is no closure function to call")
-                        }
-                    }
                     tks.lineStructure().joinToString(" ").startsWith(makeStructure("ARRAY", "ON")) -> {
                         val args = tks.copyOfRange(2, tks.lineStructure().size)
                         wrongTypes(args)
@@ -614,15 +536,6 @@ class Execute(action: Parser): Doing(action, action.levels) {
                         if (tks[0].value is JavaElem) {
                             wrongType(tks[4])
                             (tks[0].value as JavaElem).setField(tks[2].value as String, tks[4])
-                            Token("RES", "NONE")
-                        } else {
-                            TOER("Only java elements have static fields")
-                        }
-                    }
-                    tks.lineStructure().joinToString(" ").startsWith(makeStructure("INSTANCE", "DOCK", "ID", "EQUALS")) && tks.size == 5 -> {
-                        if (tks[0].value is JavaInstance) {
-                            wrongType(tks[4])
-                            (tks[0].value as JavaInstance).setField(tks[2].value as String, tks[4])
                             Token("RES", "NONE")
                         } else {
                             TOER("Only java elements have static fields")
@@ -697,7 +610,7 @@ class Execute(action: Parser): Doing(action, action.levels) {
     fun wrongTypes(a: Array<Token<*>>) {
         for (e in a)
             if (!arrayOf("NUMT", "STRT", "BOOLT", "ELEMT", "ARRAYT", "CHANNELT", "JBYTET", "JSHORTT", "JINTT", "JLONGT", "JFLOATT", "JDOUBLET", "JNULLT").contains(e.id))
-                TOER("Trying to pass a wrong type: ${e.value}")
+                TOER("Trying to pass a wrong type: ${e.id}")
     }
 
     fun wrongIds(array: Array<Token<*>>) {
@@ -712,7 +625,7 @@ class Execute(action: Parser): Doing(action, action.levels) {
     }
 
     fun wrongType(a: Token<*>) {
-        if (!arrayOf("STRING", "NUMBER", "BOOL", "ELEMENT", "INSTANCE", "ARRAY", "CHANNEL", JAVA_BYTE_TOKEN, JAVA_SHORT_TOKEN, JAVA_INT_TOKEN, JAVA_LONG_TOKEN, JAVA_FLOAT_TOKEN, JAVA_DOUBLE_TOKEN, JAVA_NULL_TOKEN).contains(a.id))
+        if (!arrayOf("STRING", "NUMBER", "BOOL", "INSTANCE", "ARRAY", "CHANNEL", JAVA_BYTE_TOKEN, JAVA_SHORT_TOKEN, JAVA_INT_TOKEN, JAVA_LONG_TOKEN, JAVA_FLOAT_TOKEN, JAVA_DOUBLE_TOKEN, JAVA_NULL_TOKEN).contains(a.id))
             TOER("Trying to pass a wrong type: ${a.value}")
     }
 }

@@ -23,7 +23,7 @@ open class Instance {
             if (i.value == arg[plu].id)
                 properties[i.key] = arg[plu]
             else
-                TOER("Wrong type(${i.value} != ${arg[0].id}) in element: $plu")
+                TOER("Wrong type(${i.value} != ${arg[plu].id}) in element: $plu")
             plu++
         }
     }

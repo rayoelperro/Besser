@@ -1,0 +1,12 @@
+elem mine then
+    set x as STR
+    set y as STR
+end
+
+set u = (@mine: 'a' 'b')
+print (@u.x)
+print (@u.y)
+@u.x = 'c'
+@u.y = 'd'
+print (@u.x)
+print (@u.y)

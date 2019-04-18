@@ -12,3 +12,27 @@ set my_list = (@list: (:'One''Two''Three'))
 @my_list.each then
     print (get 0)
 end
+
+fun checkparam then
+    set check = (get 0)
+    when then
+        |@check = (yield:)
+            print 'Parametro Correcto'
+        |true
+            print ('Parametro Equivocado: ' + (yield:))
+    end
+end
+
+@checkparam (:'Mi parametro') then
+    set r = 'Pepe lui'
+end @r
+
+fun subyield then
+    yield then
+        print (get 0)
+    end
+end
+
+@subyield then
+    yield: (read ': ')
+end

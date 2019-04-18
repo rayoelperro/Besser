@@ -9,7 +9,6 @@ import java.io.File
 /**
  * Created by rayoe on 24/08/2018.
  */
-
 fun main(args: Array<String>) {
     val levels: MutableList<Context> = mutableListOf()
     levels.add(Context(args))

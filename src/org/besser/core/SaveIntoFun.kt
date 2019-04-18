@@ -32,6 +32,8 @@ class SaveIntoFun(action: Parser, name: String, val elem: Elem? = null): Doing(a
                 if (deep == 0){
                     function.end_var = cheks[1].value as String
                     save()
+                } else {
+                    function.lines += tks
                 }
             }
             else -> {

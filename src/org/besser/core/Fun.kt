@@ -20,7 +20,7 @@ open class Fun(val name : String, val context : MutableList<Context>, val scon :
             Token("RES", "NONE")
         else
             context.last()[end_var as String] as Token<*>
-        Context.pour(context.last(), scon)
+        //Context.pour(context.last(), scon)
         context.removeAt(context.size - 1)
         return tr
     }

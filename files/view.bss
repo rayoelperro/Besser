@@ -1,3 +1,4 @@
+except on (:'GOBSS')
 import (:'javax.swing.JFrame' 'java.awt.Dimension')
 
 set win = (@JFrame:)

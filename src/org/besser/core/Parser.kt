@@ -54,12 +54,8 @@ class Parser(val levels: MutableList<Context>) {
             TOER("More closed parentheses than opened")
         }
         val tkp = elems.toTypedArray()
-        val tkv = tkp.getVars(levels.last()).nameOperators().nameKeywords()
-        return run(tkv)
-    }
-
-    fun run(tks: Array<Token<*>>): Token<*> {
-        return actualDoing.run(tks)
+        val tkv = tkp.nameOperators().nameKeywords().getVars(levels.last())
+        return actualDoing.run(tkv)
     }
 
     fun changeDoing(func : Fun, array: Array<Token<*>>, ins : Instance? = null, spawn : Boolean = false) {
@@ -122,7 +118,7 @@ class Parser(val levels: MutableList<Context>) {
         actualDoing = when(type) {
             DoingType.SaveIntoFun -> SaveIntoFun(this, name)
             DoingType.SaveIntoElem -> SaveIntoElem(this, name)
-            else -> TODO("Unchecked doing")
+            else -> TODO("Wrong doing")
         }
     }
 }

@@ -42,7 +42,7 @@ class WhenCondition(parser: Parser) : Doing(parser, parser.levels) {
                     if (opened) {
                         opened = false
                     }
-                    val exp = cheks.copyOfRange(1, cheks.size)
+                    val exp = tks.copyOfRange(1, cheks.size)
                     val rts = Parser(levels).parseLine(exp)
                     if (rts.id != "BOOL")
                         TOER("The expression must return a boolean")

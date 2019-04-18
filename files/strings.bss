@@ -1,5 +1,26 @@
 import (:'java.lang.String' 'java.lang.StringBuilder')
 
+fun split then
+    except if (! ((get as ARRAY) on STR STR))
+    set key = (get 0)
+    set value = (get 1)
+    set act = ''
+    set res = (:)
+    repeat (size @value) as ps then
+        set idx = ((@ps - 1) of @value)
+        if (@idx = @key) then
+            set res = (@res + @act)
+            set act = ''
+        else
+            if (@ps = (size @value)) then
+                set res = (@res + (@act + @idx))
+            else
+                set act = (@act + @idx)
+            end
+        end
+    end
+end @res
+
 fun join_in_str then
     set all = (get as ARRAY)
     set spl = (get 0)
