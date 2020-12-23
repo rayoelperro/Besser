@@ -207,7 +207,7 @@ end
 
 spawn @my_spawned_fun (:'Hi!') then
   set e = (get 0)
-  while true
+  while true then
     print @e
   end
 end
